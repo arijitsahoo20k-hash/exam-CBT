@@ -108,12 +108,18 @@ const UI = (() => {
       grid.appendChild(btn);
     }
 
-    // Update stats
+    // Update legend badges (the pentagon counters at top of sidebar)
     const stats = ExamEngine.getStats();
-    document.getElementById('stat-answered').textContent     = stats.answered + stats.markedAnswered;
-    document.getElementById('stat-not-answered').textContent = stats.notAnswered;
-    document.getElementById('stat-marked').textContent       = stats.marked + stats.markedAnswered;
-    document.getElementById('stat-not-visited').textContent  = stats.notVisited;
+    const elAns = document.getElementById('legend-answered');
+    const elNot = document.getElementById('legend-not-answered');
+    const elVis = document.getElementById('legend-not-visited');
+    const elMrk = document.getElementById('legend-marked');
+    const elMrkAns = document.getElementById('legend-marked-answered');
+    if (elAns)    elAns.textContent    = stats.answered;
+    if (elNot)    elNot.textContent    = stats.notAnswered;
+    if (elVis)    elVis.textContent    = stats.notVisited;
+    if (elMrk)    elMrk.textContent    = stats.marked;
+    if (elMrkAns) elMrkAns.textContent = stats.markedAnswered;
   }
 
   // ── Question Render ───────────────────────────────────────
