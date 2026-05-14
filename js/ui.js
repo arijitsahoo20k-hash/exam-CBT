@@ -131,7 +131,7 @@ const UI = (() => {
     const secStart = ExamEngine.getSectionStart(secIdx);
     const localIdx = globalIdx - secStart + 1;
     document.getElementById('q-number').textContent =
-      `Question ${localIdx} of ${ExamEngine.getSections()[secIdx]?.questions.length || 0}`;
+      `Question No. ${localIdx}`;
 
     // Image
     const imgEl = document.getElementById('question-img');
@@ -241,6 +241,16 @@ const UI = (() => {
       ExamEngine.toggleMark();
       renderCurrentQuestion();
       buildPalette();
+    });
+
+    // Mark for Review & Next (bottom nav button)
+    document.getElementById('btn-mark-review-nav')?.addEventListener('click', () => {
+      if (ExamEngine.isSubmitted()) return;
+      ExamEngine.toggleMark();
+      ExamEngine.next();
+      renderCurrentQuestion();
+      buildPalette();
+      syncSectionTab(ExamEngine.getCurrentSection());
     });
 
     // Zoom
