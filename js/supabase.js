@@ -11,7 +11,7 @@
 
 const SupabaseClient = (() => {
   const BASE = () => window.APP_CONFIG?.SUPABASE_URL || 'https://lzikbvokyykurcldnupy.supabase.co';
-  const KEY  = () => window.APP_CONFIG?.SUPABASE_ANON_KEY || '';
+  const KEY  = () => window.APP_CONFIG?.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6aWtidm9reXlrdXJjbGRudXB5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg3NDk0MjAsImV4cCI6MjA5NDMyNTQyMH0.frd4u02NIpO3N56ZBQ4x3FhbR9i8PgTBxreuLtBtOV0';
 
   let _token = null;
 
