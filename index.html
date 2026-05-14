@@ -314,7 +314,7 @@
     <div class="exam-body">
       <div class="question-area">
         <div class="question-meta">
-          <span class="q-number" id="q-number">Question 1</span>
+          <span class="q-number" id="q-number">Question No. 1</span>
           <div class="q-actions">
             <button class="btn-zoom" id="btn-zoom">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg> Zoom
@@ -323,6 +323,10 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg> Mark for Review
             </button>
           </div>
+        </div>
+        <div class="marks-info-bar">
+          <span class="q-type-label">Question Type: <strong>Multiple Choice</strong></span>
+          <span class="marks-label">Marks for correct answer: <strong class="marks-pos">+4</strong> &nbsp;|&nbsp; Negative Marks: <strong class="marks-neg">1</strong></span>
         </div>
         <div class="question-image-wrap" id="question-image-wrap">
           <img id="question-img" src="" alt="Question" draggable="false" />
@@ -336,10 +340,11 @@
           <div class="option-row" data-val="D"><span class="opt-label">D</span><span class="opt-text">Option D</span></div>
         </div>
         <div class="nav-actions">
+          <button class="btn-mark-review-nav" id="btn-mark-review-nav">Mark for Review &amp; Next</button>
           <button class="btn-clear" id="btn-clear">Clear Response</button>
           <div class="nav-btns">
             <button class="btn-nav" id="btn-prev">← Previous</button>
-            <button class="btn-nav primary" id="btn-next">Save & Next →</button>
+            <button class="btn-nav primary" id="btn-next">Save &amp; Next</button>
           </div>
         </div>
       </div>
@@ -349,11 +354,11 @@
           <span id="sidebar-name">Candidate</span>
         </div>
         <div class="palette-legend">
-          <div class="legend-item"><span class="dot answered"></span>Answered</div>
-          <div class="legend-item"><span class="dot not-answered"></span>Not Answered</div>
-          <div class="legend-item"><span class="dot marked"></span>Marked</div>
-          <div class="legend-item"><span class="dot not-visited"></span>Not Visited</div>
-          <div class="legend-item"><span class="dot marked-answered"></span>Marked &amp; Answered</div>
+          <div class="legend-item"><span class="legend-badge answered" id="legend-answered">0</span>Answered</div>
+          <div class="legend-item"><span class="legend-badge not-answered" id="legend-not-answered">0</span>Not Answered</div>
+          <div class="legend-item"><span class="legend-badge not-visited" id="legend-not-visited">0</span>Not Visited</div>
+          <div class="legend-item"><span class="legend-badge marked" id="legend-marked">0</span>Marked for Review</div>
+          <div class="legend-item full-row"><span class="legend-badge marked-answered" id="legend-marked-answered">0</span>Answered &amp; Marked for Review (will be evaluated)</div>
         </div>
         <div class="palette-section-label" id="palette-section-label">Section</div>
         <div class="palette-grid" id="palette-grid"></div>
