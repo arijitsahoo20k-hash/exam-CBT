@@ -10,7 +10,7 @@
  */
 
 const SupabaseClient = (() => {
-  const BASE = () => window.APP_CONFIG?.SUPABASE_URL || '';
+  const BASE = () => window.APP_CONFIG?.SUPABASE_URL || 'https://lzikbvokyykurcldnupy.supabase.co';
   const KEY  = () => window.APP_CONFIG?.SUPABASE_ANON_KEY || '';
 
   let _token = null;
